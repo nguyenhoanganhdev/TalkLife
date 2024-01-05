@@ -1,64 +1,35 @@
+import { signUp } from '@redux/actions';
 import { createReducer } from '@reduxjs/toolkit';
-import {
-  getUserDetailsFailed,
-  getUserDetailsRequest,
-  getUserDetailsSuccess,
-  getUsersListFailed,
-  getUsersListRequest,
-  getUsersListSuccess,
-} from './actions';
-import { User } from './types';
+import { CategoriesPayload } from './types';
 
-export interface UsersState {
-  usersList: {
+export interface AuthState {
+  signUp: {
     loading: boolean;
-    users: User[];
-    page: number;
-    total: number | undefined;
-    total_pages: number | undefined;
-  };
-  userDetails: {
-    loading: boolean;
-    details: User | null;
   };
 }
 
-const initialState: UsersState = {
-  usersList: {
+const initialState: AuthState = {
+  signUp: {
     loading: false,
-    users: [],
-    page: 1,
-    total: undefined,
-    total_pages: undefined,
-  },
-  userDetails: {
-    loading: false,
-    details: null,
   },
 };
 
-export const usersReducer = createReducer(initialState, {
-  [getUsersListRequest.type]: state => {
-    state.usersList.loading = true;
-  },
-  [getUsersListSuccess.type]: (state, action) => {
-    state.usersList.loading = false;
-    state.usersList.users = [...state.usersList.users, ...action.payload.data];
-    state.usersList.page = action.payload.page;
-    state.usersList.total = action.payload.total;
-    state.usersList.total_pages = action.payload.total_pages;
-  },
-  [getUsersListFailed.type]: state => {
-    state.usersList.loading = false;
-  },
-  [getUserDetailsRequest.type]: state => {
-    state.userDetails.loading = true;
-  },
-  [getUserDetailsSuccess.type]: (state, action) => {
-    state.userDetails.loading = false;
-    state.userDetails.details = action.payload.data;
-  },
-  [getUserDetailsFailed.type]: state => {
-    state.usersList.loading = false;
-  },
+export const authReducer = createReducer(initialState, builder => {
+  builder.addCase(signUp.type, state => {
+    state.signUp.loading = true;
+  });
+});
+
+export interface CategoriesState {
+  selectedCategories: CategoriesPayload[];
+}
+
+const initialCategoriesState: CategoriesState = {
+  selectedCategories: [],
+};
+
+export const categoriesReducer = createReducer(initialCategoriesState, builder => {
+  builder.addCase(signUp.type, state => {
+    state.selectedCategories = [];
+  });
 });

@@ -1,11 +1,12 @@
-import { usersReducer } from '@redux/reqres/reducers';
 import { persistCombineReducers } from 'redux-persist';
 import messagesReducer from './messageHandler/reducers';
+import { authReducer, categoriesReducer } from './reqres/reducers';
 import { reduxStorage } from './storage';
 
 const reducers = {
-  users: usersReducer,
+  auth: authReducer,
   messages: messagesReducer,
+  categories: categoriesReducer,
 };
 
 const persistConfig = {
