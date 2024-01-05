@@ -3845,10 +3845,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/shorthands@npm:^1.78.0":
-  version: 1.78.0
-  resolution: "@tamagui/shorthands@npm:1.78.0"
-  checksum: f4b31c0c38f660d1f2b4da0c3aa08b8a6a070f52b3f9c671dbbaa65a9d3f2ade04a98d21383e35a57acd6385bc263dd8453238a6a8b72bee1cff8eb3294e85fe
+"@tamagui/shorthands@npm:^1.82.3":
+  version: 1.82.4
+  resolution: "@tamagui/shorthands@npm:1.82.4"
+  checksum: 193815374b7bfbcbb9362bfb17326b2597d1922ea881af29ad802cc4c36c424e701f200dbc221678e1b9431c1e250febbdc55ac9a4656adc38456dac37f82bb9
   languageName: node
   linkType: hard
 
@@ -12386,7 +12386,7 @@ __metadata:
     "@react-navigation/native": ^6.1.9
     "@react-navigation/native-stack": ^6.9.17
     "@reduxjs/toolkit": 1.9.7
-    "@tamagui/shorthands": ^1.78.0
+    "@tamagui/shorthands": ^1.82.3
     "@tamagui/themes": ^1.78.0
     "@trivago/prettier-plugin-sort-imports": ^4.3.0
     "@tsconfig/react-native": ^3.0.0
