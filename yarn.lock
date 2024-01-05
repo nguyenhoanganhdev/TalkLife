@@ -14111,13 +14111,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-toast-message@npm:^2.1.7":
-  version: 2.1.7
-  resolution: "react-native-toast-message@npm:2.1.7"
+"react-native-toast-message@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "react-native-toast-message@npm:2.2.0"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 120673d2f1ad783e81c81df2f29a4b9d8fa314cdbc47afb53c9b8ce693f21b28c7376c2d4cd07bd2568344fba52851029eb6c6a609050348ce6ca3bbc3b06328
+  checksum: b286b8d5ca0f21737c2e0a8e9c2d6dab2c06a3895335aa541c69eeb42d526cc6f3951069e59d8d346d3e6cafb8feaa450c35b0efe7c3d51ff81351d1477e71eb
   languageName: node
   linkType: hard
 
@@ -15822,7 +15822,7 @@ __metadata:
     react-native-screens: ^3.27.0
     react-native-svg: ^13.14.0
     react-native-svg-transformer: ^1.3.0
-    react-native-toast-message: ^2.1.7
+    react-native-toast-message: ^2.2.0
     react-native-vector-icons: ^10.0.2
     react-native-version-number: ^0.3.6
     react-redux: 8.1.3
