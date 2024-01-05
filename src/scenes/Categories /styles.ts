@@ -75,7 +75,7 @@ export default StyleSheet.create({
     fontSize: 14,
     fontStyle: 'normal',
     fontWeight: '400',
-    lineHeight: 14, // You can adjust this value based on your requirements
+    lineHeight: 18, // You can adjust this value based on your requirements
     // Additional styles as needed
   },
   confirmAge: {
@@ -91,6 +91,21 @@ export default StyleSheet.create({
     height: 54,
     borderColor: '#647FFF',
     borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  flatListContainer: {
+    paddingVertical: 16, // Adjust the padding as needed
+    paddingHorizontal: -8,
+  },
+  item: {
+    flex: 1,
+    margin: 8,
+    paddingVertical: 24,
+    paddingHorizontal: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.12)',
+    borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },

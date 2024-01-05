@@ -26,7 +26,7 @@ function ContainerApp(): ReactElement {
   useEffect(() => {
     hideBootSplash();
   }, [hideBootSplash]);
-
+  console.log('ContainerApp', store);
   return (
     <Suspense fallback="Loading...">
       <Provider store={store}>

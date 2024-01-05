@@ -23,7 +23,7 @@ const InputForm: FC<InputFormProps> = ({
 }) => {
   return (
     <View style={styles.container}>
-      <Text>{label}</Text>
+      <Text style={styles.labelStyle}>{label}</Text>
       <Input
         {...rest}
         style={{ ...styles.input, ...customStyle }}

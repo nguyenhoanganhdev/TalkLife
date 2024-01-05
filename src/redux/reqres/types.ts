@@ -1,63 +1,36 @@
-export type CreateUserRequestPayload = {
-  name: string;
-  job: string;
+export type SignUpRequest = {
+  params: SignUpParams;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-empty-pattern
+  callback?: ({}: any) => void;
 };
 
-export type CreateUserSuccessPayload = {
-  name: string;
-  job: string;
-  id: string;
-  createdAt: string;
+export type SignUpParams = {
+  firstName: string;
+  lastName: string;
+  email?: string;
+  password?: string;
 };
 
-export type ModifyUserRequestPayload = {
-  userId: string;
-  name: string;
-  job: string;
-};
-
-export type ModifyUserSuccessPayload = {
-  name: string;
-  job: string;
-  updatedAt: string;
-};
-
-export type DeleteUserRequestPayload = {
-  userId: string;
-};
-
-export type UsersRequestPayload = {
-  pageParam?: number;
-  per_page?: number;
-};
-
-export type UsersSuccessPayload = {
-  page: number;
-  per_page: number;
-  total: number;
-  total_pages: number;
-  data?: User[] | null;
-  support: Support;
-};
-
-export type UserDetailsRequestPayload = {
-  userId: number;
-};
-
-export type UserDetailsSuccessPayload = {
-  data: User;
-  support: Support;
-};
-
-export type User = {
-  id: number;
+export type UserProfile = {
   email: string;
-  first_name: string;
-  last_name: string;
-  avatar: string;
+  password: string;
+  firstName: string;
+  lastName: string;
 };
 
-export type Support = {
-  url: string;
-  text: string;
+export type SignUpSuccessPayload = {
+  id: number;
+  createdAt: string;
+  updatedAt: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  role: string;
+};
+
+export type CategoriesPayload = {
+  id: number;
+  createdAt: string;
+  updatedAt: string;
+  name: string;
 };
